@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMultiSelectListExample", "SampleMultiSelectListExample\SampleMultiSelectListExample.csproj", "{FFA52A8D-6148-48B2-9A03-E4BC4DC5494C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFA52A8D-6148-48B2-9A03-E4BC4DC5494C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA52A8D-6148-48B2-9A03-E4BC4DC5494C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA52A8D-6148-48B2-9A03-E4BC4DC5494C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA52A8D-6148-48B2-9A03-E4BC4DC5494C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {264570E0-D0D4-467F-BE86-986FC15494B0}
+	EndGlobalSection
+EndGlobal

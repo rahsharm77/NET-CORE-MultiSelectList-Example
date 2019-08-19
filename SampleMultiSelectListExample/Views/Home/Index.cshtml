@@ -1,0 +1,55 @@
+﻿@using SampleMultiSelectListExample.Models
+@model UserAccessData
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="panel-heading">
+    <h2>Sample MultiSelectList Example</h2>
+</div>
+
+<div class="row">
+
+    <br />
+    <div id="newAccess">
+        <div>
+            <br />
+            @using (Html.BeginForm("ProcessInformation", "Home", FormMethod.Post, new { @id = "form-submission-id", @class = "" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-3 text-left">User Type:</label>
+                        @Html.DropDownListFor(m => m.requestAccessId, Model.RequestAccessIdList, new { @id= "UserTypeID", @class = "form-control", placeholder = "Select User Type", @required = "required", @autocomplete = "off" })
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 text-left">Application/Business Group:</label>
+                        @Html.ListBoxFor(m => m.containerIds, Model.ContainerIdList, new { @id = "ContainerID", @name = "choices-multiple-remove-button", @class = "form-control", placeholder = "Select Application/Business Group", @required = "required", @autocomplete = "off", @multiple = "multiple" })
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 text-left">Requested Permissions:</label>
+                        @Html.DropDownListFor(m => m.appPermissionId, Model.AppPermissionIdList, new { @id = "AppPermissionID", @class = "form-control", placeholder = "Select Requested Permission", @required = "required", @autocomplete = "off" })
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 text-left">Business Justification:</label>
+                        @Html.TextAreaFor(m => m.BusinessJustification, new { @id = "Description", @class = "form-control", placeholder = "Provide business justification", @cols="20",@rows="4",@resize="none", @required = "required", @autocomplete = "off" })
+                        
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-5">
+                        <br />
+                        <button id="btn-submit-user" type="submit" class="btn btn-success">Submit</button>
+                        <button id="btn-cancel-request" type="button" class=" btn btn-danger" onclick="location.href='@Url.Action("Index", "Home")'">Cancel</button>
+                    </div>
+                </div>
+            }
+        </div>
+        <br />
+
+    </div>
+</div>
